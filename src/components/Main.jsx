@@ -36,8 +36,16 @@ const Main = () => {
                 </p>
                 <p className="text-[#475467] font-normal text-sm md:text-lg">Watch the video to see.</p>
 
-                <div className="sm:w-[600px] w-full h-[405px] bg-[#f8f9fe] rounded-[12px] mx-auto mt-10">
-
+                <div className="sm:w-[600px] w-full h-[405px] bg-[#f8f9fe] rounded-[12px] mx-auto mt-10flex items-center justify-center">
+                    <video 
+                        className="w-full h-full rounded-[12px]" 
+                        controls 
+                        autoPlay 
+                        loop
+                    >
+                        <source src="/zikky-video.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
 
