@@ -55,7 +55,7 @@ const Main = () => {
                     <div className="flex-1">
                         <h2 className="text-ml md:text-2xl lg:text-3xl font-bold mb-3">Why Use support Agent?</h2>
                         <p className="text-[#475467] font-normal text-sm md:text-lg">
-                            Choosing to manage your email with Bob is an easy process that goes as follows:
+                            Choosing to manage your customers with an AI-powered agent goes as follows:
                         </p>
                     </div>
                 </div>
