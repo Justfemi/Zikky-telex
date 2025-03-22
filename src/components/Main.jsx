@@ -1,4 +1,30 @@
+import { useState } from "react";
+
 const Main = () => {
+    const [formData, setFormData] = useState({
+        fullName: "",
+        email: "",
+        companyName: "",
+        phoneNumber: "",
+    });
+
+    const [error, setError] = useState("");
+
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+      setError(""); 
+    };
+  
+    const isFormValid =
+      formData.fullName && formData.email && formData.companyName && formData.phoneNumber;
+  
+    const handleSubmit = (e) => {
+      if (!isFormValid) {
+        e.preventDefault();
+        setError("All fields are required.");
+      }
+    };
+
     return (
         <section className="w-full max-w-[1200px] p-4 mx-auto">
             <div className="sm:mt-24 mt-10 text-center max-w-3xl mx-auto px-4">
@@ -8,7 +34,7 @@ const Main = () => {
                     routine inquiries and automating support tasks, Bob frees your team to focus on high-value interactions, 
                     improving customer satisfaction and efficiency.
                 </p>
-                <p className="text-[#475467] font-normal text-sm md:text-lg">Watch Video to  understand why you should choose Bob.</p>
+                <p className="text-[#475467] font-normal text-sm md:text-lg">Watch the video to see.</p>
 
                 <div className="sm:w-[600px] w-full h-[405px] bg-[#f8f9fe] rounded-[12px] mx-auto mt-10">
 
@@ -25,9 +51,11 @@ const Main = () => {
                         </p>
                     </div>
                 </div>
-                <button className="bg-[#7141f8] text-white py-3 px-6 rounded-[12px] text-base hover:bg-[#7261a1] cursor-pointer mt-8">
-                    Start Free Trial
-                </button>
+                <div className="mt-8">
+                    <a href="https://telex.im/auth/sign-up" className="bg-[#7141f8] text-white py-3 px-6 rounded-[12px] text-base hover:bg-[#7261a1]" target="_blank">
+                        Start Free Trial
+                    </a>
+                </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 my-5 ">
                     <div className="bg-white text-center py-10 px-3 min-w-[300px] h-fit rounded-[12px] shadow-[22px_37px_52px_0px_rgba(160,160,160,0.12)]">
                         <h3 className="text-[#101828] font-bold text-lg mb-4">Get Instant Answers anytime, No more waiting</h3>
@@ -46,7 +74,7 @@ const Main = () => {
                 </div>
             </div>
 
-            <div className="sm:mt-24 mt-10 flex items-center gap-6 sm:flex-row flex-col">
+            {/* <div className="sm:mt-24 mt-10 flex items-center gap-6 sm:flex-row flex-col">
                 <div className="sm:w-[600px] w-full sm:h-[600px] h-auto">
                     <img  
                         src="/benefit.png"
@@ -91,7 +119,7 @@ const Main = () => {
                     ✅   <strong>Smart Issue Escalation:</strong> Detect complex issues and route them to the right human agent.
                     </p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="sm:mt-24 mt-10">
                  <div className="flex items-start gap-2 mb-2">
@@ -115,9 +143,11 @@ const Main = () => {
 
             <div className="sm:mt-24 mt-10 max-w-3xl mx-auto text-center">
                 <h3 className="font-bold text-[#475467] text-xl sm:text-2xl">Ready to transform your operation?{" "} <span className="font-normal"> Start your free Telex trial today</span> </h3>
-                <button className="bg-[#7141f8] text-white py-3 px-6 rounded-[12px] text-base hover:bg-[#7261a1] cursor-pointer mt-5">
-                    Start Free Trial
-                </button>
+                <div className="mt-5">
+                    <a href="https://telex.im/auth/sign-up" className="bg-[#7141f8] text-white py-3 px-6 rounded-[12px] text-base hover:bg-[#7261a1]" target="_blank">
+                        Start Free Trial
+                    </a>
+                </div>
             </div>
 
             <div className="sm:my-24 my-10 max-w-5xl mx-auto text-center">
@@ -144,7 +174,10 @@ const Main = () => {
                         <label className="text-base font-medium text-[#1E1E1E]">Full Name</label>
                         <input 
                             type="text" 
+                            name="fullName"
                             placeholder="Enter your full name"
+                            value={formData.fullName}
+                            onChange={handleChange}
                             className="border rounded-[8px] border-[#C1C6CE] p-3 focus:border-[#7141f8]"
                         />
                     </div>
@@ -154,6 +187,9 @@ const Main = () => {
                         <input 
                             type="email"
                             placeholder="Enter your email address"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             className="border rounded-[8px] border-[#C1C6CE] p-3 focus:border-[#7141f8]"
                         />
                     </div>
@@ -162,6 +198,9 @@ const Main = () => {
                         <label className="text-base font-medium text-[#1E1E1E]">Company Name</label>
                         <input 
                             type="text" 
+                            name="companyName"
+                            value={formData.companyName}
+                            onChange={handleChange}
                             placeholder="Enter your company name"
                             className="border rounded-[8px] border-[#C1C6CE] p-3 focus:border-[#7141f8]"
                         />
@@ -171,14 +210,24 @@ const Main = () => {
                         <label className="text-base font-medium text-[#1E1E1E]">Phone Numbr </label>
                         <input 
                             type="text" 
+                            name="phoneNumber"
+                            value={formData.phoneNumber}
+                            onChange={handleChange}
                             placeholder="Enter phone number"
                             className="border rounded-[8px] border-[#C1C6CE] p-3 focus:border-[#7141f8]"
                         />
                     </div>
 
-                    <button className="bg-[#7141f8] text-white py-3 px-6 rounded-[12px] text-base hover:bg-[#7261a1] cursor-pointer mt-8 w-full">
+                    {error && <p className="text-red-500 mt-4">{error}</p>}
+                    
+                    <a 
+                        href="https://telex.im/auth/sign-up"
+                        className={`py-3 px-6 rounded-[12px] text-base block w-full mt-8 text-center 
+                            ${isFormValid ? "bg-[#7141f8] text-white hover:bg-[#7261a1]" : "bg-gray-400 text-gray-200 cursor-not-allowed"}`}
+                        onClick={handleSubmit}
+                    >
                         Start Free Trial
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>

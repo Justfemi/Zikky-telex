@@ -12,7 +12,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"><span className="text-[#7141F8]">AI-Powered Customer Support</span> for Business that needs 24/7 Automation</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"><span className="text-[#7141F8]">AI-Powered Customer Support</span> for Businesses that needs 24/7 Automation</h2>
                     <p className="text-[#475467] font-normal text-sm md:text-lg mt-4">
                         AI-Powered customer support to answer your customer questions, handle requests, and help customers, so you can focus on growing your business
                     </p>
