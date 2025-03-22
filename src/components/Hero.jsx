@@ -6,7 +6,7 @@ const Hero = () => {
                 <div className="relative">
                     <div className="absolute sm:-right-10 -right-3 sm:-top-6 -top-5">
                         <img 
-                            src="../../public/hero-decor.svg" 
+                            src="/hero-decor.svg" 
                             alt="hero decoration" 
                             className="w-[150px]"
                         />
@@ -19,7 +19,7 @@ const Hero = () => {
                 </div>
                 <div className="">
                     <img 
-                        src="../../public/hero-img.png" 
+                        src="/hero-img.png" 
                         alt="hero image" 
                         className="w-full  h-full object-cover"
                     />

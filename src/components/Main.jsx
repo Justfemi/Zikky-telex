@@ -49,7 +49,7 @@ const Main = () => {
             <div className="sm:mt-24 mt-10 flex items-center gap-6 sm:flex-row flex-col">
                 <div className="sm:w-[600px] w-full sm:h-[600px] h-auto">
                     <img  
-                        src="../../public/benefit.png"
+                        src="/benefit.png"
                         alt="telex-logo"
                         className="w-full h-full object-cover rounded-[12px]"
                     />
@@ -106,7 +106,7 @@ const Main = () => {
 
                 <div className="">
                     <img
-                        src="../../public/works.png"
+                        src="/works.png"
                         alt="telex-logo"
                         className="w-full h-auto"
                     />
@@ -120,15 +120,15 @@ const Main = () => {
                 </button>
             </div>
 
-            <div className="sm:my-24 my-10 max-w-4xl mx-auto text-center">
+            <div className="sm:my-24 my-10 max-w-5xl mx-auto text-center">
                 <div className="flex items-center mx-auto w-fit">
                     <img 
-                        src="../../public/Logo.png"
+                        src="/Logo.png"
                         alt="telex-logo"
                         className="w-6"
                     />
                     <img 
-                        src="../../public/Telex.png"
+                        src="/Telex.png"
                         alt="telex-logo"
                         className="w-16"
                     />
@@ -139,7 +139,7 @@ const Main = () => {
                     Sign up for Telex - your journey starts here.
                 </p>
 
-                <div className="sm:w-[40%] w-full mx-auto mt-8">
+                <div className="sm:w-[50%] w-full mx-auto mt-8">
                     <div className="flex flex-col gap-2 text-left mb-4">
                         <label className="text-base font-medium text-[#1E1E1E]">Full Name</label>
                         <input 

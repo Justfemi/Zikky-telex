@@ -5,12 +5,12 @@ const Header = () => {
         <header className="p-4 w-full max-w-[1200px] flex justify-between items-center mx-auto">
             <div className="flex items-center">
                 <img 
-                    src="../../public/Logo.png"
+                    src="/Logo.png"
                     alt="telex-logo"
                     className="w-6"
                 />
                 <img 
-                    src="../../public/Telex.png"
+                    src="/Telex.png"
                     alt="telex-logo"
                     className="w-16"
                 />

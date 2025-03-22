@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import GetStarted from "./components/GetStarted"
 import Header from "./components/Header"
 import Hero from "./components/Hero"
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Main />
       <GetStarted />
+      <Footer />
     </>
   )
 }
